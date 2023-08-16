@@ -29,9 +29,9 @@ function showNotes() {
     html += `
             <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Note ${index + 1}</h5>
+                        <h5 class="card-title">Task ${index + 1}</h5>
                         <p class="card-text"> ${element}</p>
-                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger">Delete Note</button>
+                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger">Task Completed</button>
                     </div>
                 </div>`;
   });
@@ -39,7 +39,7 @@ function showNotes() {
   if (notesObj.length != 0) {
     notesElm.innerHTML = html;
   } else {
-    notesElm.innerHTML = `Nothing to show! Create your first Note!`;
+    notesElm.innerHTML = `No Tasks are created! Create your first Task!`;
   }
 }
 
